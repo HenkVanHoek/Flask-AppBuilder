@@ -64,6 +64,9 @@ The *ContactGroup* model.
     from sqlalchemy import Column, Integer, String, ForeignKey, Date
     from sqlalchemy.orm import relationship
     from flask_appbuilder import Model
+    
+    from . import appbuilder, db
+    from .models import Product, ProductType
 
     class ContactGroup(Model):
         id = Column(Integer, primary_key=True)
